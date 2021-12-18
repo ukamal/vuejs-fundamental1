@@ -1,17 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    {{title}}
+    <Navbar></Navbar>
+    <Hook></Hook>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Navbar from './components/Navbar.vue'
+import Hook from './components/Hook.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data(){
+    return {
+      title: 'Wow its vuejs 1st project',
+      
+    }
+  },
+  components:{
+    Navbar,
+    Hook
+  },
+  methods:{
+   
   }
 }
 </script>
@@ -26,3 +40,5 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+
