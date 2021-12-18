@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <title>VueJS Method</title>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+  
+<div id="app">
+	<h1>{{ MyName() }}</h1>
+	<h1>{{ MayAge(35) }}</h1>
+</div>  
+
+<script>
+	let app = new Vue({
+		el: '#app',
+		data:{
+			message: 'Online vue 1st project'
+		},
+		methods: {
+			MyName(){
+				return 'Online 2nd project'
+			},
+			MayAge(age){
+				return `${this.message} My age of ${age}`
+			}
+		},
+	})
+</script>
+
+
+  </body>
+</html>

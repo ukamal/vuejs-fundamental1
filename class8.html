@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs condition</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="class7">
+        <h3 v-if="name">kamal hossen</h3>
+        <h3 v-else-if="age">35</h3>
+
+        <button @click="ShowName">Show Name | {{ name }}</button>
+        <button @click="ShowAge">Show Age | {{ age }}</button>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: '#class7',
+            data: {
+                name: true,
+                age: true
+            },
+            methods: {
+                ShowName(){
+                    this.name = !this.name
+                },
+                ShowAge(){
+                    this.age = !this.age
+                }
+            },
+        })
+    </script>
+</body>
+</html>
